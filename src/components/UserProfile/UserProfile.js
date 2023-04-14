@@ -2,8 +2,10 @@ import './UserProfile.css';
 
 function UserProfile({ userProfileData }) {
   const { user } = userProfileData[0];
-  const { id, first_name, last_name, email, avatar, monthlyClicks, clicksReviewed, isUserActive } = user;
-  let usage = clicksReviewed / monthlyClicks * 100;
+  const { id, first_name, last_name, email, avatar, isUserActive} = user;
+  let clicksReviewed = Math.floor((Math.random() * 3000) + 1000);
+  let monthlyClicks = clicksReviewed + 2000;
+  let usage = clicksReviewed/monthlyClicks*100;
   return (
     <div className='user-profile-container'>
       <div className='user-profile-avatar'>

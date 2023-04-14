@@ -1,3 +1,5 @@
+import { MOUSE_ENTER,MOUSE_LEAVE,REQUEST_PENDING, REQUEST_FULLFILLED, REQUEST_REJECTED } from '../constant'
+
 const initialState = {
   userDetails: [],
   isLoading: false,
@@ -20,7 +22,7 @@ const initialState = {
 const userListReducer = (state = initialState, action) => {
   // console.log(action)
   switch (action.type) {
-    case 'MOUSE_ENTER':
+    case MOUSE_ENTER:
       return {
         ...state,
         userProfile: [
@@ -29,47 +31,47 @@ const userListReducer = (state = initialState, action) => {
           }
         ]
       }
-    case 'MOUSE_LEAVE':
+    case MOUSE_LEAVE:
       return {
         ...state,
         userProfile: []
       }
 
-    case 'REQUEST_PENDING':
-      return {
-        ...state,
-        isLoading: true
-      }
-    case 'REQUEST_FULLFILLED':
-      return {
-        ...state,
-        userDetails: action.payload.data && action.payload.data.map((userDetail) => {
-          // console.log("userdetails",userDetail)
+      case REQUEST_PENDING:
+        return {
+          ...state,
+          isLoading: true,
+          userDetails: [],
+          error: null,
+        };
+      case REQUEST_FULLFILLED:
+        const userDetails = action.payload.map((userDetail) => {
           if (userDetail.id === 1) {
             return {
               ...userDetail,
-              isUserActive: false,
-              userAccess: 'Owner'
-            }
-          }
-          else {
+              isUserActive: true,
+              userAccess: 'Owner',
+            };
+          } else {
             return {
               ...userDetail,
               isUserActive: false,
-              userAccess: 'Manager'
-            }
+              userAccess: 'Manager',
+            };
           }
-        }),
-        isLoading: false,
-        error: '',
-      }
-    case 'REQUEST_REJECTED':
-      return {
-        ...state,
-        error: action.payload,
-        userDetails: [],
-        isLoading: false
-      }
+        });
+        return {
+          ...state,
+          isLoading: false,
+          userDetails,
+        };
+      case REQUEST_REJECTED:
+        return {
+          ...state,
+          isLoading: false,
+          userDetails: [],
+          error: action.error,
+        };
     default: return state;
   }
 }
