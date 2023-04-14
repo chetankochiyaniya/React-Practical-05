@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import UserList from './components/UserList/UserList';
 import UserProfile from './components/UserProfile/UserProfile';
 import './App.css';
+import UserListPagination from './components/UserListPagination/UserListPagination';
 
 function App() {
   const userProfileData = useSelector((state) => state.userProfile);

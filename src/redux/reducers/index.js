@@ -1,4 +1,4 @@
-import { MOUSE_ENTER,MOUSE_LEAVE,REQUEST_PENDING, REQUEST_FULLFILLED, REQUEST_REJECTED } from '../constant'
+import { MOUSE_ENTER,MOUSE_LEAVE,REQUEST_PENDING, REQUEST_FULLFILLED, REQUEST_REJECTED, CHANGE_PAGE } from '../constant'
 
 const initialState = {
   userDetails: [],
@@ -72,6 +72,11 @@ const userListReducer = (state = initialState, action) => {
           userDetails: [],
           error: action.error,
         };
+      case CHANGE_PAGE:
+          return {
+            ...state,
+            pagination: action.payload.pagination,
+          };
     default: return state;
   }
 }
