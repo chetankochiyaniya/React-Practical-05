@@ -1,20 +1,20 @@
-# React-Practical-04 
-## User list app - Part : 01 Static UI 
+# React-Practical-05 
+## User list app - Part : 02 Functional specifications
 
 #
 
-### For Live demo (Part : 01 Static UI) : 
-https://react-practical-4-simform.netlify.app/
+### For Live demo (Part : 02 Functional specifications) : 
+https://react-practical-5-simform.netlify.app/
 
 ### OR
 
 #### (click this link to show output images) : 
-https://drive.google.com/drive/folders/17RAhUdDTruysDS6iEWYy34WtBjnUcRXZ?usp=share_link
+https://drive.google.com/drive/folders/1E-Zf5mnccrCCRDC_hbhgCkF59jC7sbgb?usp=share_link
 #
 
 # Directory structure
-![dir_struct](https://user-images.githubusercontent.com/60025285/231443590-02cfb2e8-046d-4fdf-9362-9e2c9ec7abea.png)
 
+![Screenshot 2023-04-14 at 5 18 38 PM](https://user-images.githubusercontent.com/60025285/232035784-76ab4b37-3165-424f-a972-3865ca83dfab.png)
 
 
 #
@@ -46,21 +46,31 @@ Builds the app for production to the `build` folder.
 
 #
 
-## output :
-<img src="https://github.com/chetankochiyaniya/React-Practical-04/blob/ca19c0b6be15e911a6575b8e8250141a71136a47/output/lg-screen-hover-2.png" alt="Practical Output Image" >
+# Output :
+<img src="https://github.com/chetankochiyaniya/React-Practical-05/blob/0934dd65bb201d67f07f455bff51ab05825fefd3/output/lg-screen-active-page1.png" alt="Practical Output Image" >
 
 #
 
-<img src="https://github.com/chetankochiyaniya/React-Practical-04/blob/ca19c0b6be15e911a6575b8e8250141a71136a47/output/lg-screen-home.png" alt="Practical Output Image" >
+<img src="https://github.com/chetankochiyaniya/React-Practical-05/blob/0934dd65bb201d67f07f455bff51ab05825fefd3/output/lg-screen-inactive-page2.png" alt="Practical Output Image" >
 
 #
 
-<img src="https://github.com/chetankochiyaniya/React-Practical-04/blob/ca19c0b6be15e911a6575b8e8250141a71136a47/output/lg-screen-hover.png" alt="Practical Output Image" >
+<img src="https://github.com/chetankochiyaniya/React-Practical-05/blob/0934dd65bb201d67f07f455bff51ab05825fefd3/output/lg-screen-page1.png" alt="Practical Output Image" >
+
+#
+
+<img src="https://github.com/chetankochiyaniya/React-Practical-05/blob/0934dd65bb201d67f07f455bff51ab05825fefd3/output/lg-screen-page2.png" alt="Practical Output Image" >
 
 #
 
 # Mobile View
 
 <pre>
-<img src="https://github.com/chetankochiyaniya/React-Practical-04/blob/ca19c0b6be15e911a6575b8e8250141a71136a47/output/sm-screen-home.jpg" alt="Practical Output Image" width="350px" />       <img src="https://github.com/chetankochiyaniya/React-Practical-04/blob/ca19c0b6be15e911a6575b8e8250141a71136a47/output/sm-screen-touch.jpg" width="350px" alt="Practical Output Image"/>
+<img src="https://github.com/chetankochiyaniya/React-Practical-05/blob/0934dd65bb201d67f07f455bff51ab05825fefd3/output/sm-screen-page1.jpg" alt="Practical Output Image" width="350px" />       <img src="https://github.com/chetankochiyaniya/React-Practical-05/blob/0934dd65bb201d67f07f455bff51ab05825fefd3/output/sm-screen-active-page1.jpg" width="350px" alt="Practical Output Image"/>
+</pre>
+
+#
+
+<pre>
+<img src="https://github.com/chetankochiyaniya/React-Practical-05/blob/0934dd65bb201d67f07f455bff51ab05825fefd3/output/sm-screen-page2.jpg" alt="Practical Output Image" width="350px" />       <img src="https://github.com/chetankochiyaniya/React-Practical-05/blob/0934dd65bb201d67f07f455bff51ab05825fefd3/output/sm-screen-inactive-page2.jpg" width="350px" alt="Practical Output Image"/>
 </pre>
