@@ -46,10 +46,20 @@
   font-size: 20px;
   color: rgba(0, 0, 0, 0.802);
 }
-.user-profile-status {
+.user-profile-status-inactive {
   font-size: 18px;
   color: white;
-  background-color: rgb(255, 165, 0);
+  background-color: rgb(255, 165, 0); 
+  padding: 8px;
+  border: 1px;
+  border-radius: 5px;
+  width: 150px;
+  margin-left: 40px;
+}
+.user-profile-status-active {
+  font-size: 18px;
+  color: white;
+  background-color: rgb(59, 138, 59);
   padding: 8px;
   border: 1px;
   border-radius: 5px;

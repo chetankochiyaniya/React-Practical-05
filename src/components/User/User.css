@@ -78,7 +78,8 @@
   color: rgba(0, 0, 0, 0.433);
   cursor: pointer;
   width: 80px;
-  color: rgb(96, 162, 96)
+  color: rgb(96, 162, 96);
+  font-weight: bold;
 }
 .user-owner-access{
   display: flex;
@@ -87,6 +88,7 @@
   color: rgba(0, 0, 0, 0.433);
   cursor: pointer;
   width: 54px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 850px) {

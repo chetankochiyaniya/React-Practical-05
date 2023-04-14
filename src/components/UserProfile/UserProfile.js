@@ -17,7 +17,7 @@ function UserProfile({ userProfileData }) {
       </div>
       <div className='user-profile-email'>{email}</div>
       <div className='user-plan'>Your Plan: Standard</div>
-      <div className='user-profile-status'>{isUserActive ? 'Active' : 'Inactive'} User</div>
+      <div className={isUserActive ? 'user-profile-status-active' : 'user-profile-status-inactive'}>{isUserActive ? 'Active' : 'Inactive'} User</div>
       <div className='user-plan-usage'>Plan Uses</div>
       {/*Progress Bar*/}
       <div className='progressBar'>
