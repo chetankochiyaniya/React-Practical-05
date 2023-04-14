@@ -16,10 +16,10 @@ export const mouseLeave = (user) => {
     }
   }
 }
-export const requestFulFilled=(data)=> {
+export const requestFulFilled=(users)=> {
   return { 
     type: "REQUEST_FULLFILLED", 
-    payload: data 
+    payload: users
   }
 }
 export const requestRejected=(error)=> {
@@ -34,50 +34,37 @@ export const requestPending=()=> {
   }
 }
 
-export const getUserData = (pageNo) => {
-  return async (dispatch) => {
+export const getUserData = (page) => {
+  return (dispatch) => {
     dispatch(requestPending());
-    try {
-      const response = await axios.get(`https://reqres.in/api/users?page=${pageNo}`);
-      dispatch(requestFulFilled(response.data.amount));
-    } catch (error) {
-      dispatch(requestRejected(error.message));
-    }
+    axios
+      .get(`https://reqres.in/api/users?page=${page}`)
+      .then((response) => {
+        const users = response.data.data;
+        // console.log("response data:", response.data);
+        // console.log("users:", users);
+        dispatch(requestFulFilled(users));
+      })
+      .catch((error) => {
+        // console.log("error:", error);
+        dispatch(requestRejected(error.message));
+      });
   };
 };
 
 
-
-// export const getUserData=(pageNo)=> {
-//   return ()=>async (dispatch) => {
-//     try {
-//       dispatch(requestPending());
-//       const { data } = await axios.get(`https://reqres.in/api/users?page=${pageNo}`);
-//       dispatch(requestFulFilled(data.amount));
-//     } catch (error) {
-//       dispatch(requestRejected(error.message));
-//     }
-//   };
-// }
-
-// export const requestUsers = (pageNo) => {
-//   const url = ;
+// export const getUserData = (page) => {
 //   return (dispatch) => {
-//     dispatch(fetchUserRequest());
-//     const { CancelToken } = axios;
-//     const source = CancelToken.source();
-//     axios.get(url, {cancelToken: source.token})
+//     dispatch(requestPending());
+//     axios
+//       .get(`https://reqres.in/api/users?page=${page}`)
 //       .then((response) => {
-//         const users = response.data
-//         dispatch(fetchUserSuccess(users))
+//         const users = response.data.data
+//         console.log("users",users)
+//         dispatch(requestFulFilled(users))
 //       })
-//       .catch((thrown) => {
-//         if (axios.isCancel(thrown)) {
-//           console.log('Request canceled', thrown.message);
-//         } else {
-//           const errorMsg = thrown.message
-//           dispatch(fetchUserFailure(errorMsg))
-//         }
+//       .catch((error) => {
+//         dispatch(requestRejected(error.message))
 //       });
-//   }
-// }
+//   };
+// };

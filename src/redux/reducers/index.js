@@ -18,7 +18,7 @@ const initialState = {
 // };
 
 const userListReducer = (state = initialState, action) => {
-  console.log(action)
+  // console.log(action)
   switch (action.type) {
     case 'MOUSE_ENTER':
       return {
@@ -43,7 +43,8 @@ const userListReducer = (state = initialState, action) => {
     case 'REQUEST_FULLFILLED':
       return {
         ...state,
-        userDetails: action.payload.data.map((userDetail) => {
+        userDetails: action.payload.data && action.payload.data.map((userDetail) => {
+          // console.log("userdetails",userDetail)
           if (userDetail.id === 1) {
             return {
               ...userDetail,
