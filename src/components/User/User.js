@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { mouseEnter, mouseLeave } from '../../redux/actions';
 import OtherInfo from './OtherInfo';
 import './User.css';
@@ -8,7 +8,6 @@ function User({user}) {
 
   const dispatch = useDispatch();
   const [screen,setScreen] = useState(window.innerWidth)
-
 
   useEffect(() => {
     const onResize = () => {
@@ -20,8 +19,6 @@ function User({user}) {
     };
   }, [screen]);
   
-  const { email, first_name, last_name, avatar} = user
-  
   // for hovering effect & displaying card data accordingly
   function handleMouseEnter() {
     dispatch(mouseEnter(user));
@@ -30,6 +27,7 @@ function User({user}) {
     dispatch(mouseLeave(user));
   }
 
+  const { email, first_name, last_name, avatar} = user
 
   return (
   <>

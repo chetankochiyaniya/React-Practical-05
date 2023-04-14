@@ -2,8 +2,10 @@ import './UserProfile.css';
 
 function UserProfile({ userProfileData }) {
   const { user } = userProfileData[0];
-  const { id, first_name, last_name, email, avatar, monthlyClicks, clicksReviewed, isUserActive } = user;
-  let usage = clicksReviewed / monthlyClicks * 100;
+  const { id, first_name, last_name, email, avatar, isUserActive} = user;
+  let clicksReviewed = Math.floor((Math.random() * 3000) + 1000);
+  let monthlyClicks = clicksReviewed + 2000;
+  let usage = clicksReviewed/monthlyClicks*100;
   return (
     <div className='user-profile-container'>
       <div className='user-profile-avatar'>
@@ -15,7 +17,7 @@ function UserProfile({ userProfileData }) {
       </div>
       <div className='user-profile-email'>{email}</div>
       <div className='user-plan'>Your Plan: Standard</div>
-      <div className='user-profile-status'>{isUserActive ? 'Active' : 'Inactive'} User</div>
+      <div className={isUserActive ? 'user-profile-status-active' : 'user-profile-status-inactive'}>{isUserActive ? 'Active' : 'Inactive'} User</div>
       <div className='user-plan-usage'>Plan Uses</div>
       {/*Progress Bar*/}
       <div className='progressBar'>

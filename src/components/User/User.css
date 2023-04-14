@@ -49,7 +49,7 @@
 .user-status select, .user-access select{
   background-color: rgb(228 228 228 / 38%);
   /* border: none; */
-  border-color: darkgray;
+  border-color: rgb(169, 169, 169);
   border-radius: 5px;
   padding: 3px;
   color: rgba(0, 0, 0, 0.433);
@@ -78,7 +78,8 @@
   color: rgba(0, 0, 0, 0.433);
   cursor: pointer;
   width: 80px;
-  color: rgb(96, 162, 96)
+  color: rgb(96, 162, 96);
+  font-weight: bold;
 }
 .user-owner-access{
   display: flex;
@@ -87,6 +88,7 @@
   color: rgba(0, 0, 0, 0.433);
   cursor: pointer;
   width: 54px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 850px) {
